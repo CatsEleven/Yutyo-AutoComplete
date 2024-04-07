@@ -1,0 +1,246 @@
+.header{
+    display: flex;
+}
+
+.header-icon{
+    width: 30px;
+    height: 30px;
+}
+
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    width: 800px;
+    height: 200px;
+    }
+
+h1{
+    font-size: 23px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.id {
+    display: flex;
+    align-items: center; /* 子要素を中央に寄せる */
+    width: 150px;
+    height: 40px;
+    border-radius: 20px 90px 90px 20px; /* 角を丸くする */
+}
+
+/* .id-ch{
+    font-size: 8px;
+    margin-top: 1px;
+    padding-top: 0px;
+    border-top: 0px;
+    padding-left: 5px;
+} */
+
+.id-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.password{
+    display: flex;
+    align-items: center; /* 子要素を中央に寄せる */
+    width: 150px;
+    height: 40px;
+    border-radius: 20px 90px 90px 20px; /* 角を丸くする */
+
+}
+
+/* .password-ch{
+    font-size: 8px;
+    margin-top: 1px;
+    padding-top: 0px;
+    border-top: 0px;
+    padding-left: 5px;
+} */
+
+.menu-ch{
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.password-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.id:hover{
+    background-color: rgb(249, 238, 255);
+}
+.password:hover{
+    background-color: rgb(249, 238, 255);
+}
+
+
+input[name="tab_name"]{
+    display: none;
+}
+
+.content_class{
+    display: none;
+}
+
+input:checked + .menu-ch + .content_class {
+    display: block;
+}
+
+/* ゆうちょダイレクトのIDを入力してねの文章 */
+.insert-text{
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+/* 入力欄、罫線、ボタンのまとめ。flexをかける*/
+.insert-id{
+    display: flex;
+}
+
+/* 罫線 */
+.line{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#first{
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    font-size: 30px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#second{
+    width: 70px;
+    text-align: center;
+    height: 30px;
+    font-size: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#third{
+    width: 90px;
+    text-align: center;
+    height: 30px;
+    font-size: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.button{
+    margin-left: 15px;
+    margin-top: 3px;
+    height: 30px;
+    width: 120px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(127, 100, 248);   
+    border: none;
+    border-radius: 20px 20px 20px 20px; 
+    /* 以下はコピペ */
+    display: inline-block;
+    box-shadow: 0 5px 0 #ca1c30; /* 影の太さ・色 */
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; /* 文字の下線を消す */
+}
+
+/* クリック時 */
+.button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+/* 文字、入力欄、罫線、ボタンのまとめ。positionを使った場所の固定用 */
+.id-area{
+    position: absolute;
+    left: 280px;
+    top: 68px;
+    /* border: 1px solid black;
+    border-radius: 20px 20px 20px 20px; */
+}
+
+
+input::placeholder{
+  align-items: center !important;
+  opacity:0.5;
+}
+
+/* スピンボタン（上下ボタンで数字を入れるやつ）を削除 */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+
+
+.insert-password{
+    display: flex;
+}
+
+.password-area{
+    position: absolute;
+    left: 280px;
+    top: 68px;
+}
+
+input:focus{
+    outline: 1px #6666ff solid;
+}
+
+
+
+/* 開発用 */
+.password-wrapper {
+    display: flex;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+   
+#input-password {
+    flex: 1;
+    outline: none;
+    appearance: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    /* font-size: 16px; */
+    /* 以下は追加分 */
+    /* width: 60px; */
+    /* text-align: center; */
+    align-items: center;
+    height: 30px;
+    font-size: 30px;
+}
+
+.password__toggle {
+    width: 40px;
+    border: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='48' width='48'><path d='M24 31.5q3.55 0 6.025-2.475Q32.5 26.55 32.5 23q0-3.55-2.475-6.025Q27.55 14.5 24 14.5q-3.55 0-6.025 2.475Q15.5 19.45 15.5 23q0 3.55 2.475 6.025Q20.45 31.5 24 31.5Zm0-2.9q-2.35 0-3.975-1.625T18.4 23q0-2.35 1.625-3.975T24 17.4q2.35 0 3.975 1.625T29.6 23q0 2.35-1.625 3.975T24 28.6Zm0 9.4q-7.3 0-13.2-4.15Q4.9 29.7 2 23q2.9-6.7 8.8-10.85Q16.7 8 24 8q7.3 0 13.2 4.15Q43.1 16.3 46 23q-2.9 6.7-8.8 10.85Q31.3 38 24 38Zm0-15Zm0 12q6.05 0 11.125-3.275T42.85 23q-2.65-5.45-7.725-8.725Q30.05 11 24 11t-11.125 3.275Q7.8 17.55 5.1 23q2.7 5.45 7.775 8.725Q17.95 35 24 35Z'/></svg>") no-repeat center center;
+    background-size: 50% auto;
+    cursor: pointer;
+}
+
+  .password__toggle.is-visible {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='48' width='48'><path d='m31.45 27.05-2.2-2.2q1.3-3.55-1.35-5.9-2.65-2.35-5.75-1.2l-2.2-2.2q.85-.55 1.9-.8 1.05-.25 2.15-.25 3.55 0 6.025 2.475Q32.5 19.45 32.5 23q0 1.1-.275 2.175-.275 1.075-.775 1.875Zm6.45 6.45-2-2q2.45-1.8 4.275-4.025Q42 25.25 42.85 23q-2.5-5.55-7.5-8.775Q30.35 11 24.5 11q-2.1 0-4.3.4-2.2.4-3.45.95L14.45 10q1.75-.8 4.475-1.4Q21.65 8 24.25 8q7.15 0 13.075 4.075Q43.25 16.15 46 23q-1.3 3.2-3.35 5.85-2.05 2.65-4.75 4.65Zm2.9 11.3-8.4-8.25q-1.75.7-3.95 1.075T24 38q-7.3 0-13.25-4.075T2 23q1-2.6 2.775-5.075T9.1 13.2L2.8 6.9l2.1-2.15L42.75 42.6ZM11.15 15.3q-1.85 1.35-3.575 3.55Q5.85 21.05 5.1 23q2.55 5.55 7.675 8.775Q17.9 35 24.4 35q1.65 0 3.25-.2t2.4-.6l-3.2-3.2q-.55.25-1.35.375T24 31.5q-3.5 0-6-2.45T15.5 23q0-.75.125-1.5T16 20.15Zm15.25 7.1Zm-5.8 2.9Z'/></svg>");
+  }
+
+.display-info{
+    display: flex;
+    position: absolute;
+    left: 280px;
+    top: 165px;
+    font-size: 18px;
+}
+

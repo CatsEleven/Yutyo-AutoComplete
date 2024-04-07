@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yutyo-AutoComplete設定画面</title>
+    <link rel="stylesheet" href="./02_style.css">
+    
+</head>
+<body>
+    <!-- <p class="id-title">ここにログインIDを入力してください</p> -->
+    <!-- ヘッダー定義 -->
+    <div class="header">
+        <img class="header-icon" src="https://play-lh.googleusercontent.com/pHDhGjmtwOrgrg3XXP_vL99pCngi-7ED93InYG5zQpJjJQmIwfYGlo0zAC39NYOKggA=w240-h480-rw" alt="ゆうちょダイレクト" title="ゆうちょダイレクト">    
+        <h1>設定</h1>
+    </div>
+
+
+    <!-- メニュー定義 -->
+    <div class="menu">
+        <!-- ログインID設定 -->
+        <div class="id">
+            <img class="id-logo" src="https://img.icons8.com/?size=256&id=23187&format=png" alt="ログインID", title="ログインID">
+            <input type="radio" name="tab_name" id="tab1"  checked>
+            <label class="menu-ch" for="tab1">ログインID</label>
+            <div class="content_class" id="menu-id">
+                <div class="id-area">
+                    <p class="insert-text">ここにログインIDを入力してください</p>
+                    <div class="insert-id">
+                        <input id="first" type="number" placeholder="xxxx">
+                        <p class="line">ー</p>
+                        <input id="second" type="number" placeholder="xxxx">
+                        <p class="line">ー</p>
+                        <input id="third" type="number" placeholder="xxxxx">
+                        <button class="button" id="register-id">登録</button>
+                        <button class="button" id="cancel-id">キャンセル</button>
+                    </div>
+                    
+                </div>
+            <div class="display-info">
+                <p id="now-id-value">現在の登録ID：</p>
+                <p id="id-js"></p>
+            </div>
+                
+            </div>
+
+        </div>
+        
+        <!-- パスワード設定 -->
+        <div class="password">
+            <img class="password-logo" src="https://img.icons8.com/?size=256&id=10480&format=png" alt="パスワード", title="パスワード">
+            <input type="radio" name="tab_name" id="tab2">
+            <label class="menu-ch" for="tab2">パスワード</label>
+            <div class="content_class">
+                <div class="password-area">
+                    <p class="insert-text">ここにパスワードを入力してください</p>
+                    <div class="insert-password">
+                        <div class="password-wrapper">
+                            <input id="input-password" type="password" placeholder="????">
+                            <button class="password__toggle"></button>
+                        </div>
+                        <button class="button" id="register-pass">登録</button>
+                        <button class="button" id="cancel-pass">キャンセル</button>
+                    </div>
+            </div>
+            <div class="display-info">
+                <p id="now-pass-value">現在の登録パスワード：</p>
+                <p id="pass-js"></p>
+            </div>    
+    </div>
+
+    
+    <script src="./04_content_script.js"></script>
+    <script src="./03_main.js"></script>
+</body>
+</html>
